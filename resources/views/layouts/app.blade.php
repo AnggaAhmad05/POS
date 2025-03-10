@@ -1,15 +1,14 @@
 @extends('adminlte::page')
-{{-- Extend and customize the browser title --}} 
-@section('title')
+{{-- Extend and customize the browser title --}}
+ @section('title')
 {{ config('adminlte.title') }} 
 @hasSection('subtitle') | @yield('subtitle') @endif
 @stop
 
 {{-- Extend and customize the page content header --}}
 
-@section('content_header') 
-    @hasSection('content_header_title')
-        <h1 class="text-muted"> @yield('content_header_title')
+@section('content_header') @hasSection('content_header_title')
+<h1 class="text-muted"> @yield('content_header_title')
 
 @hasSection('content_header_subtitle')
 <small class="text-dark">
@@ -28,11 +27,12 @@ Version: {{ config('app.version', '1.0.0') }}
 </div>
 
 <strong>
+ 
     <a href="{{ config('app.company_url', '#') }}">
         {{ config('app.company_name', 'My company') }}
         </a>
-    </strong>
-     @stop
+        </strong> 
+        @stop
         {{-- Add common Javascript/Jquery code --}} 
         @push('js')
         <script>
@@ -41,8 +41,8 @@ Version: {{ config('app.version', '1.0.0') }}
         // Add your common script logic here...
         });
         
-        </script> 
-        @endpush
+        </script>
+         @endpush
         
         {{-- Add common CSS customizations --}}
         
@@ -58,6 +58,5 @@ Version: {{ config('app.version', '1.0.0') }}
         font-weight: 600;
         }
         
-        </style>
-         @endpush
+        </style> @endpush
         
